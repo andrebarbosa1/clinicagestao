@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Acesse a Página Aqui!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .big-button {
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .big-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .url-box {
+            background: #1f2937;
+            color: #10b981;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.2em;
+            text-align: center;
+            margin: 20px 0;
+            word-break: break-all;
+        }
+        
+        .alert {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .alert h3 {
+            color: #92400e;
+            margin-bottom: 10px;
+        }
+        
+        .alert p {
+            color: #78350f;
+            line-height: 1.6;
+        }
+        
+        .success {
+            background: #d1fae5;
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .success h3 {
+            color: #065f46;
+            margin-bottom: 10px;
+        }
+        
+        .success p {
+            color: #047857;
+            line-height: 1.6;
+        }
+        
+        .steps {
+            counter-reset: step;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .steps li {
+            counter-increment: step;
+            padding: 15px 15px 15px 60px;
+            margin: 10px 0;
+            background: #f9fafb;
+            border-radius: 10px;
+            position: relative;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .steps li:before {
+            content: counter(step);
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #667eea;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .small-button {
+            display: block;
+            background: white;
+            color: #667eea;
+            padding: 20px;
+            border: 3px solid #667eea;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        
+        .small-button:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .emoji {
+            font-size: 2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Página Encontrada!</h1>
+            <p>Acesse Relatórios Avançados Aqui</p>
+        </div>
+        
+        <div class="content">
+            <div class="success">
+                <h3>✅ Boa Notícia!</h3>
+                <p>A página <strong>Relatórios Avançados</strong> foi criada com sucesso e está funcionando!</p>
+            </div>
+            
+            <div class="alert">
+                <h3>⚠️ Por que não aparece no menu?</h3>
+                <p>O menu lateral filtra itens baseado nas suas <strong>permissões de usuário</strong>. Se você não é admin ou não tem permissão no módulo "Relatórios", o menu não aparece.</p>
+                <p style="margin-top: 10px;"><strong>MAS</strong> você pode acessar a página diretamente pela URL! 👇</p>
+            </div>
+            
+            <h2 style="text-align: center; margin: 30px 0 20px 0;">🚀 Acesse Agora:</h2>
+            
+            <a href="http://localhost:5173/relatorios-avancados" class="big-button">
+                <span class="emoji">📊</span>
+                Clique Aqui para Relatórios Avançados
+            </a>
+            
+            <p style="text-align: center; color: #6b7280; margin: 10px 0;">ou copie e cole esta URL no navegador:</p>
+            
+            <div class="url-box">
+                http://localhost:5173/relatorios-avancados
+            </div>
+            
+            <h3 style="margin-top: 40px; margin-bottom: 20px;">📋 Como Usar:</h3>
+            <ol class="steps">
+                <li>Clique no botão grande acima</li>
+                <li>OU copie a URL e cole na barra de endereço</li>
+                <li>A página vai carregar com todos os relatórios</li>
+                <li>Adicione aos favoritos para acesso rápido!</li>
+            </ol>
+            
+            <h3 style="margin-top: 40px; margin-bottom: 20px;">🔧 Outras Páginas Úteis:</h3>
+            
+            <div class="button-group">
+                <a href="http://localhost:5173/debug-permissoes" class="small-button">
+                    <span class="emoji">🔍</span>
+                    Verificar Minhas Permissões
+                </a>
+                
+                <a href="http://localhost:5173/teste" class="small-button">
+                    <span class="emoji">🧪</span>
+                    Página de Teste de Rotas
+                </a>
+                
+                <a href="http://localhost:5173/relatorios" class="small-button">
+                    <span class="emoji">📈</span>
+                    Dashboard Geral de Relatórios
+                </a>
+            </div>
+            
+            <div class="success" style="margin-top: 30px;">
+                <h3>💡 Dica Pro:</h3>
+                <p>Adicione a URL aos <strong>favoritos do navegador</strong> para acessar rapidamente sempre que precisar!</p>
+                <p style="margin-top: 10px;">Atalho: <strong>Ctrl + D</strong> (Windows/Linux) ou <strong>Cmd + D</strong> (Mac)</p>
+            </div>
+            
+            <div style="background: #f9fafb; padding: 20px; border-radius: 10px; margin-top: 30px; text-align: center;">
+                <p style="color: #6b7280; margin-bottom: 10px;">
+                    <strong>Nota:</strong> Se você estiver usando um servidor diferente de localhost:5173,
+                    substitua pela URL correta do seu servidor.
+                </p>
+                <p style="color: #6b7280;">
+                    Exemplo: <code style="background: #e5e7eb; padding: 2px 6px; border-radius: 4px;">https://seu-servidor.com/relatorios-avancados</code>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
